@@ -1,52 +1,71 @@
-# 🌾 Kisan Sathi – AI Voice Assistant for Farmers
+# 🌾 Kisan Sathi – Voice Assistant for Farmers
 
-Kisan Sathi is a Hindi voice-based AI assistant designed to help farmers access important agricultural information using simple voice commands.
+Kisan Sathi is a Hindi voice-based assistant that helps farmers access important agricultural information using simple voice commands.
 
-The system allows farmers to speak their queries in Hindi and receive useful information such as:
+Farmers can ask questions in Hindi and receive useful information such as:
 
-* 🌦 Weather updates
-* 📈 Mandi (market) prices
-* 📍 Nearby agricultural markets
+* Weather updates
+* Mandi (market) prices
+* Nearby agricultural markets
 
-The project combines **speech recognition, natural language processing, and a mobile application** to make agricultural information easily accessible.
+The system combines **speech recognition, natural language processing, and a mobile application** to make agricultural information easily accessible.
 
 ---
 
-# 🚀 Features
+## 📸 Screenshots
 
-* 🎤 Hindi voice input from farmers
-* 🌦 Real-time weather information
-* 📊 Mandi price information
+### Home Screen
+
+![Home Screen](images/home_screen.png)
+
+### Voice Input
+
+![Voice Input](images/voice_input.png)
+
+### Mandi Price Result
+
+![Mandi Price](images/mandi_price.png)
+
+### Weather Result
+
+![Weather Result](images/weather.png)
+
+---
+
+## 🚀 Features
+
+* 🎤 Hindi voice input
+* 🌦 Weather information
+* 📈 Mandi price information
 * 📍 Nearby market detection
 * 🧠 NLP-based intent detection
-* 📱 Mobile interface built with Flutter
+* 📱 Flutter mobile application
 
 ---
 
-# 🧰 Tech Stack
+## 🧰 Tech Stack
 
-### Frontend
+**Frontend**
 
-* Flutter (Mobile Application)
+Flutter
 
-### Backend
+**Backend**
 
-* Python
-* FastAPI
+Python
+FastAPI
 
-### AI / Machine Learning
+**AI / NLP**
 
-* Speech Recognition
-* NLP Intent Detection
-* Hugging Face Transformers
+Speech Recognition
+Transformers (Hugging Face)
 
-### Model Used
+**Model**
 
-IndicWav2Vec Hindi Speech Recognition Model from **Bharat4AI**
+IndicWav2Vec Hindi Speech Recognition (Bharat4AI)
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```
 kisan-sathi-voice-assistant
@@ -59,50 +78,48 @@ kisan-sathi-voice-assistant
 │       ├── market_price_service.py
 │       ├── nearby_market_service.py
 │       ├── nlu_intent.py
-│       ├── utils_city.py
-│       ├── utils_commodity.py
-│       └── utils_ollama.py
+│       └── utility files
 │
 ├── kisan_sathi
 │   ├── android
 │   ├── assets
 │   ├── lib
-│   │   ├── main.dart
-│   │   ├── mandi_bhav_screen.dart
-│   │   └── services
-│   │       └── api_service.dart
-│   │
-│   ├── pubspec.yaml
-│   └── analysis_options.yaml
+│   └── pubspec.yaml
+│
+├── images
+│   ├── home_screen.png
+│   ├── voice_input.png
+│   ├── mandi_price.png
+│   └── weather.png
 │
 └── README.md
 ```
 
 ---
 
-# ⚙️ Backend Setup
+## ⚙️ Backend Setup
 
-### 1️⃣ Clone the Repository
+Clone the repository
 
 ```
 git clone https://github.com/aishwaryadhanke/kisan-sathi-voice-assistant.git
 cd kisan-sathi-voice-assistant
 ```
 
-### 2️⃣ Install Dependencies
+Install dependencies
 
 ```
 pip install fastapi uvicorn transformers torch datasets
 ```
 
-### 3️⃣ Run the Backend Server
+Run backend server
 
 ```
 cd backend/app
 uvicorn main:app --reload
 ```
 
-The backend server will start at:
+Backend will start at
 
 ```
 http://127.0.0.1:8000
@@ -110,21 +127,21 @@ http://127.0.0.1:8000
 
 ---
 
-# 📱 Flutter App Setup
+## 📱 Flutter Setup
 
-### 1️⃣ Go to Flutter Project
+Go to Flutter project
 
 ```
 cd kisan_sathi
 ```
 
-### 2️⃣ Install Dependencies
+Install dependencies
 
 ```
 flutter pub get
 ```
 
-### 3️⃣ Run the Application
+Run the app
 
 ```
 flutter run
@@ -132,21 +149,21 @@ flutter run
 
 ---
 
-# 🔊 Speech Recognition Model Setup
+## 🔊 Model Setup
 
-This project uses the **IndicWav2Vec Hindi model from Bharat4AI**.
+This project uses the **IndicWav2Vec Hindi speech recognition model** from Bharat4AI.
 
-The model is **not included in the repository** because it is very large.
+The model is **not included in this repository** because it is very large.
 
-### Step 1: Install Required Libraries
+### Install required libraries
 
 ```
 pip install transformers torch datasets
 ```
 
-### Step 2: Download the Model
+### Download the model
 
-Run this Python code once to download the model from Hugging Face.
+Run this Python code once:
 
 ```python
 from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC
@@ -155,13 +172,13 @@ processor = Wav2Vec2Processor.from_pretrained("Bharat4AI/indicwav2vec-hindi")
 model = Wav2Vec2ForCTC.from_pretrained("Bharat4AI/indicwav2vec-hindi")
 ```
 
-The model will be downloaded from:
+Model source:
 
 https://huggingface.co/Bharat4AI/indicwav2vec-hindi
 
-### Step 3: Place Model Files
+### Place model files
 
-Place the downloaded model files inside:
+Place the downloaded files inside:
 
 ```
 backend/asr/
@@ -183,30 +200,19 @@ backend
 
 ---
 
-# 🎤 Example Voice Queries
+## 🎤 Example Queries
 
-Farmers can ask questions such as:
+Farmers can ask questions like:
 
-* "आज का मौसम कैसा है?"
-* "सोयाबीन का मंडी भाव क्या है?"
-* "मेरे पास की मंडी कहाँ है?"
+* आज का मौसम कैसा है
+* सोयाबीन का मंडी भाव क्या है
+* मेरे पास की मंडी कहाँ है
 
-The system will detect the **intent** and provide the relevant response.
-
----
-
-# 📌 Future Improvements
-
-* Support for multiple Indian languages
-* Crop advisory system
-* Pest detection using computer vision
-* Offline voice recognition
+The system detects the user's intent and returns the correct information.
 
 ---
 
-# 👩‍💻 Author
+## 👩‍💻 Author
 
 **Aishwarya Dhanake**
-
 MCA Student
-AI • Data Science • Software Development

@@ -15,19 +15,30 @@ The system combines **speech recognition, natural language processing, and a mob
 ## 📸 Screenshots
 
 ### Home Screen
+
 ![Home Screen](images/home_screen.png)
 
 ### Voice Input
+
 ![Voice Input](images/voice_input.png)
 
 ### Weather Result
+
 ![Weather Result](images/weather_result.png)
 
+### Mandi Price Result
+
+![Mandi Price](images/mandi_price.png)
+
 ### Nearby Market Search
+
 ![Nearby Market](images/nearby_market.png)
 
 ### Question History
+
 ![Question History](images/question_history.png)
+
+---
 
 ## 🚀 Features
 
@@ -42,21 +53,21 @@ The system combines **speech recognition, natural language processing, and a mob
 
 ## 🧰 Tech Stack
 
-**Frontend**
+### Frontend
 
 Flutter
 
-**Backend**
+### Backend
 
 Python
 FastAPI
 
-**AI / NLP**
+### AI / NLP
 
 Speech Recognition
 Transformers (Hugging Face)
 
-**Model**
+### Model
 
 IndicWav2Vec Hindi Speech Recognition (Bharat4AI)
 
@@ -86,8 +97,10 @@ kisan-sathi-voice-assistant
 ├── images
 │   ├── home_screen.png
 │   ├── voice_input.png
+│   ├── weather_result.png
 │   ├── mandi_price.png
-│   └── weather.png
+│   ├── nearby_market.png
+│   └── question_history.png
 │
 └── README.md
 ```
@@ -109,7 +122,7 @@ Install dependencies
 pip install fastapi uvicorn transformers torch datasets
 ```
 
-Run backend server
+Run the backend server
 
 ```
 cd backend/app
@@ -126,7 +139,7 @@ http://127.0.0.1:8000
 
 ## 📱 Flutter Setup
 
-Go to Flutter project
+Go to the Flutter project
 
 ```
 cd kisan_sathi
@@ -138,7 +151,7 @@ Install dependencies
 flutter pub get
 ```
 
-Run the app
+Run the application
 
 ```
 flutter run
@@ -150,7 +163,7 @@ flutter run
 
 This project uses the **IndicWav2Vec Hindi speech recognition model** from Bharat4AI.
 
-The model is **not included in this repository** because it is very large.
+The model is **not included in this repository** because it is large.
 
 ### Install required libraries
 
@@ -170,7 +183,6 @@ model = Wav2Vec2ForCTC.from_pretrained("Bharat4AI/indicwav2vec-hindi")
 ```
 
 Model source:
-
 https://huggingface.co/Bharat4AI/indicwav2vec-hindi
 
 ### Place model files
@@ -181,7 +193,7 @@ Place the downloaded files inside:
 backend/asr/
 ```
 
-Final structure:
+Example structure:
 
 ```
 backend
@@ -205,7 +217,7 @@ Farmers can ask questions like:
 * सोयाबीन का मंडी भाव क्या है
 * मेरे पास की मंडी कहाँ है
 
-The system detects the user's intent and returns the correct information.
+The system detects the user's intent and returns the appropriate information.
 
 ---
 

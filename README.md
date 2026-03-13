@@ -15,22 +15,19 @@ The system combines **speech recognition, natural language processing, and a mob
 ## 📸 Screenshots
 
 ### Home Screen
-
 ![Home Screen](images/home_screen.png)
 
 ### Voice Input
-
 ![Voice Input](images/voice_input.png)
 
-### Mandi Price Result
-
-![Mandi Price](images/mandi_price.png)
-
 ### Weather Result
+![Weather Result](images/weather_result.png)
 
-![Weather Result](images/weather.png)
+### Nearby Market Search
+![Nearby Market](images/nearby_market.png)
 
----
+### Question History
+![Question History](images/question_history.png)
 
 ## 🚀 Features
 
